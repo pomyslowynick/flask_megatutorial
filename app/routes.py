@@ -55,7 +55,17 @@ def register():
         user = User(username=form.username.data, email=form.email.data)
         user.set_password(form.password.data)
         db.session.add(user)
-        db.session.coomit()
+        db.session.commit()
         flash("Congrats, you now a registered user!")
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
+
+@app.route('/user/<username>')
+@login_required
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    posts = [
+        {'author': user, 'body': "Test post #1"},
+        {'author': user, 'body': "Test post #2"}
+
+    ]
