@@ -1,13 +1,3 @@
-<!-- TABLE OF CONTENTS -->
-## Inventory System
-
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Installation](#installation)
-* [Contact](#contact)
-
-
 <!-- ABOUT THE PROJECT -->
 # Flask Mega-Tutorial
 
@@ -35,7 +25,7 @@ By now you need to create your own VirtualEnv and install all dependecies manual
 
 
 ### Installation
-1. Clone my repo ```git clone https://github.com/pomyslowynick/inventory-system```
+1. Clone my repo ```git clone https://github.com/pomyslowynick/flask_megatutorial```
 2. TODO...
 
 <!-- CONTACT -->
@@ -43,7 +33,7 @@ By now you need to create your own VirtualEnv and install all dependecies manual
 
 Rafal Rosa - rafal.rosa@mycit.ie
 
-Project Link: [Inventory System](https://github.com/pomyslowynick/flask_megatutorial)
+Project Link: [Flask Mega Tutorial](https://github.com/pomyslowynick/flask_megatutorial)
 
 
 
