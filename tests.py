@@ -39,7 +39,7 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(u1.followed.count(), 1)
         self.assertEqual(u1.followed.first().username, 'susan')
         self.assertEqual(u2.followers.count(), 1)
-        self.assertEqual(u2.followets.first().username, 'john')
+        self.assertEqual(u2.followers.first().username, 'john')
 
         u1.unfollow(u2)
         db.session.commit()
@@ -71,10 +71,10 @@ class UserModelCase(unittest.TestCase):
         db.session.commit()
 
         # check the followed posts of each user
-        f1 = u1.followed_posts.all()
-        f2 = u2.followed_posts.all()
-        f3 = u3.followed_posts.all()
-        f4 = u4.followed_posts.all()
+        f1 = u1.followed_posts().all()
+        f2 = u2.followed_posts().all()
+        f3 = u3.followed_posts().all()
+        f4 = u4.followed_posts().all()
         self.assertEqual(f1, [p2, p4, p1])
         self.assertEqual(f2, [p2, p3])
         self.assertEqual(f3, [p3, p4])
