@@ -1,0 +1,68 @@
+2019-07-02 21:54:58,049 INFO: Microblog startup [in C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\__init__.py:47]
+2019-07-02 22:30:13,569 INFO: Microblog startup [in C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\__init__.py:47]
+2019-07-02 22:30:43,719 INFO: Microblog startup [in C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\__init__.py:47]
+2019-07-02 22:31:06,224 INFO: Microblog startup [in C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\__init__.py:47]
+2019-07-04 23:08:36,747 INFO: Microblog startup [in C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\__init__.py:47]
+2019-07-04 23:09:22,130 INFO: Microblog startup [in C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\__init__.py:47]
+2019-07-04 23:09:55,984 INFO: Microblog startup [in C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\__init__.py:47]
+2019-07-04 23:15:12,105 INFO: Microblog startup [in C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\__init__.py:47]
+2019-07-04 23:27:58,491 INFO: Microblog startup [in C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\__init__.py:47]
+2019-07-04 23:28:46,033 INFO: Microblog startup [in C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\__init__.py:47]
+2019-07-04 23:28:52,229 ERROR: Exception on /login [POST] [in c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\flask\app.py:1780]
+Traceback (most recent call last):
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\engine\default.py", line 550, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\flask\app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\flask\app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\flask\app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\flask\_compat.py", line 36, in reraise
+    raise value
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\flask\app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\flask\app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Dev\Documents\programowanie\flask_megatutorial\app\routes.py", line 32, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3222, in first
+    ret = list(self[0:1])
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3012, in __getitem__
+    return list(res)
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3324, in __iter__
+    return self._execute_and_instances(context)
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3349, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\engine\base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\util\compat.py", line 399, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value.with_traceback(tb)
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "c:\users\dev\documents\programowanie\flask_megatutorial\venv\lib\site-packages\sqlalchemy\engine\default.py", line 550, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('susan3', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
